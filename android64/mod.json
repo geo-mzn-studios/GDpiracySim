@@ -1,0 +1,14 @@
+{
+	"geode": "5.7.1",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "geostudios.gdpiracysim",
+	"name": "GD Piracy Sim",
+	"version": "v1.0.0",
+	"developers": ["Geo Studios", "GeomznGD", "MARCUStheNird"],
+	"description": "brings the gd piracy screen to 2.2 (useless)"
+}

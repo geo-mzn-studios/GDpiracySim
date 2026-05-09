@@ -32,12 +32,15 @@ jobs:
         run: |
           git clone --recursive https://github.com/geode-sdk/geode.git geode-sdk
 
+      - name: Set Geode SDK environment variable
+        run: |
+          echo "GEODE_SDK=$PWD/geode-sdk" >> $env:GITHUB_ENV
+
       - name: Configure
         run: |
-          cmake -B build ^
-            -G Ninja ^
-            -DCMAKE_BUILD_TYPE=Release ^
-            -DGEODE_SDK_PATH=geode-sdk
+          cmake -B build `
+            -G Ninja `
+            -DCMAKE_BUILD_TYPE=Release
 
       - name: Build
         run: |
@@ -81,13 +84,16 @@ jobs:
         run: |
           git clone --recursive https://github.com/geode-sdk/geode.git geode-sdk
 
+      - name: Set Geode SDK environment variable
+        run: |
+          echo "GEODE_SDK=$PWD/geode-sdk" >> $GITHUB_ENV
+
       - name: Configure
         run: |
           cmake -B build \
             -G Ninja \
             -DCMAKE_BUILD_TYPE=Release \
-            -DANDROID_ABI=arm64-v8a \
-            -DGEODE_SDK_PATH=geode-sdk
+            -DANDROID_ABI=arm64-v8a
 
       - name: Build
         run: |

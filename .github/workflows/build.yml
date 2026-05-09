@@ -41,7 +41,7 @@ jobs:
 
       - name: Install Geode CLI
         run: |
-          cargo install geode-cli
+          iwr https://geode-sdk.org/install.ps1 -useb | iex
 
       - name: Install Geode binaries
         run: |
@@ -105,7 +105,7 @@ jobs:
 
       - name: Install Geode CLI
         run: |
-          cargo install geode-cli
+          curl -fsSL https://geode-sdk.org/install.sh | bash
 
       - name: Install Geode binaries
         run: |
